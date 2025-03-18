@@ -1,16 +1,19 @@
-import { Header } from "./components/Header"
-import { PokeCard } from "./components/PokeCard"
-import { SideNav } from "./components/SideNav"
+import { useState } from 'react';
+import { Header } from './components/Header';
+import { PokeCard } from './components/PokeCard';
+import { SideNav } from './components/SideNav';
 
-function App() {
+export const App = () => {
+  const [selectedPokemonIndex, setSelectedPokemonIndex] = useState(0);
 
   return (
     <>
-     <Header />
-     <SideNav />
-     <PokeCard />
+      <Header />
+      <SideNav
+        selectedPokemonIndex={selectedPokemonIndex}
+        setSelectedPokemonIndex={setSelectedPokemonIndex}
+      />
+      <PokeCard selectedPokemonIndex={selectedPokemonIndex} />
     </>
-  )
-}
-
-export default App
+  );
+};
