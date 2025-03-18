@@ -50,10 +50,18 @@ export const PokeCard = ({ selectedPokemonIndex }) => {
       <h4>#{getFullPokedexNumber(selectedPokemonIndex)}</h4>
       <h2>{name}</h2>
       <div className='type-container'>
-        {types && types.map((typeObj) => (
-          <TypeCard key={typeObj?.type?.name} type={typeObj?.type?.name} />
-        ))}
+        {types &&
+          types.map((typeObj) => (
+            <TypeCard key={typeObj?.type?.name} type={typeObj?.type?.name} />
+          ))}
       </div>
+      <img
+        className='default-img'
+        src={`/src/assets/pokemons/${getFullPokedexNumber(
+          selectedPokemonIndex
+        )}.png`}
+        alt={name}
+      />
     </div>
   );
 };
