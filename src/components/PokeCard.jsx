@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react';
 import { getPokedexNumber, getFullPokedexNumber } from '../utils';
 import { TypeCard } from './TypeCard';
+import { Modal } from './Modal';
 
 export const PokeCard = ({ selectedPokemonIndex }) => {
   const [data, setData] = useState(null);
@@ -59,6 +60,17 @@ export const PokeCard = ({ selectedPokemonIndex }) => {
 
   return (
     <div className='poke-card'>
+      <Modal handleModalClose={() => {}}>
+        <div>
+          <h6>Name</h6>
+          <h2></h2>
+          <div>
+            <h6>Description</h6>
+            <p></p>
+          </div>
+        </div>
+
+      </Modal>
       <h4>#{getFullPokedexNumber(selectedPokemonIndex)}</h4>
       <h2>{name}</h2>
       <div className='type-container'>
