@@ -6,7 +6,6 @@ export const Modal = ({ children, handleModalClose }) => {
       <button onClick={handleModalClose} className='modal-underlay' />
       <div className='modal-content'>{children}</div>
     </div>,
-
     document.getElementById('portal')
   );
 };
