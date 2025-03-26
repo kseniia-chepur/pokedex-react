@@ -25,7 +25,7 @@ export const SideNav = ({
   return (
     <nav className={' ' + (!isNavOpen ? ' open' : '')}>
       <div className={'header ' + (!isNavOpen ? ' open' : '')}>
-        <button className='open-nav-button' ocClick={handleNavClose}>
+        <button className='open-nav-button' onClick={handleNavClose}>
           <FaArrowLeft />
         </button>
         <h1 className='text-gradient'>Pokedex</h1>
