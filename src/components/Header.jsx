@@ -1,4 +1,4 @@
-import { TiThMenu } from "@react-icons/all-files/ti/TiThMenu";
+import { TiThMenu } from "react-icons/ti";
 
 export const Header = ({ handleNavOpen }) => {
   return (

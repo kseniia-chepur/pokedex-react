@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { getFullPokedexNumber, pokemons } from '../utils';
-import { FaArrowLeft } from '@react-icons/all-files/fa/faArrowLeft';
+import { FaArrowLeft } from 'react-icons/fa';
 
 export const SideNav = ({
   selectedPokemonIndex,
