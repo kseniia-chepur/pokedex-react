@@ -1,5 +1,13 @@
-export const Header = () => {
+import { TiThMenu } from "@react-icons/all-files/ti/TiThMenu";
+
+export const Header = ({ handleNavOpen }) => {
   return (
-    <header></header>
+    <header>     
+      <button className="open-nav-button" onClick={handleNavOpen}>
+        <TiThMenu />
+      </button>
+      <h1 className="text-gragient">Pokedex</h1>
+
+    </header>
   )
 }

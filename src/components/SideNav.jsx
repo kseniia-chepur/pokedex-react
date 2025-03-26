@@ -1,7 +1,13 @@
 import { useState } from 'react';
 import { getFullPokedexNumber, pokemons } from '../utils';
+import { FaArrowLeft } from '@react-icons/all-files/fa/faArrowLeft';
 
-export const SideNav = ({ selectedPokemonIndex, setSelectedPokemonIndex }) => {
+export const SideNav = ({
+  selectedPokemonIndex,
+  setSelectedPokemonIndex,
+  isNavOpen,
+  handleNavClose,
+}) => {
   const [searchValue, setSearchValue] = useState('');
 
   const filteredPokemons = pokemons.filter((pokemon, pokemonIndex) => {
@@ -17,8 +23,13 @@ export const SideNav = ({ selectedPokemonIndex, setSelectedPokemonIndex }) => {
   });
 
   return (
-    <nav>
-      <h1 className='text-gradient'>Pokedex</h1>
+    <nav className={' ' + (!isNavOpen ? ' open' : '')}>
+      <div className={'header ' + (!isNavOpen ? ' open' : '')}>
+        <button className='open-nav-button' ocClick={handleNavClose}>
+          <FaArrowLeft />
+        </button>
+        <h1 className='text-gradient'>Pokedex</h1>
+      </div>
       <input
         placeholder='E.g. 001 or Bulbasaur'
         value={searchValue}
@@ -33,7 +44,10 @@ export const SideNav = ({ selectedPokemonIndex, setSelectedPokemonIndex }) => {
               'nav-card ' +
               (selectedPokemonIndex === pokemonIndex ? 'nav-card-selected' : '')
             }
-            onClick={() => setSelectedPokemonIndex(pokedexNumber)}
+            onClick={() => {
+              setSelectedPokemonIndex(pokedexNumber);
+              handleNavClose();
+            }}
           >
             <p>{getFullPokedexNumber(pokedexNumber)}</p>
             <p>{pokemon}</p>
