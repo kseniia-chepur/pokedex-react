@@ -173,18 +173,6 @@ span {
     line-height: inherit;
 }
 
-/* Content Sectioning */
-
-main {}
-
-header {}
-
-footer {}
-
-nav {}
-
-section {}
-
 address {
     font-style: normal;
 }
@@ -200,8 +188,6 @@ aside {
     border-radius: var(--border-radius-large);
 }
 
-
-/* Text Content */
 blockquote {
     position: relative;
     padding-left: 1.5rem;
@@ -227,21 +213,18 @@ dd {
     padding-bottom: 11px;
 }
 
-dl {}
-
 dt {
     font-weight: bold;
 }
 
-figure {}
+figure {
+    margin: 0;
+}
 
 figcaption {
     padding-top: 10px;
     font-size: 0.8rem;
 }
-
-hr {}
-
 
 ul,
 ol {
@@ -252,8 +235,6 @@ ol {
 li {
     line-height: 1.6em;
 }
-
-/* Inline Text Elements */
 
 a {
     color: var(--color-link);
@@ -320,7 +301,6 @@ sub {
     line-height: normal;
 }
 
-/* Image and multimedia */
 audio {
     width: 100%;
 }
@@ -336,7 +316,6 @@ img {
     height: auto;
 }
 
-/* Tables */
 table {
     width: fit-content;
     border: 1px solid var(--border-primary);
@@ -746,7 +725,6 @@ nav h1 {
 
 nav input {
   font-size: 0.8rem;
-  /* padding: 0.25rem; */
 }
 
 h3 {
@@ -783,8 +761,6 @@ h3 {
 .poke-card {
   padding: 1rem;
   width: 100%;
-  /* border-radius: var(--border-radius-large);
-  border: 1px solid var(--border-secondary); */
   flex: 1;
   display: flex;
   flex-direction: column;
